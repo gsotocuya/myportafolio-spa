@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { BaseComponent } from './base/base.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {PageModule} from "@views/pages/page.module";
 
 
 
@@ -10,10 +11,12 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     FooterComponent,
     BaseComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgOptimizedImage,
+    PageModule,
   ]
 })
 export class LayoutModule { }
