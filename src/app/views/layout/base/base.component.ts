@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-base',
   templateUrl: './base.component.html',
   styles: [
+
   ]
 })
 export class BaseComponent {

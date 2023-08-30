@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import {PagesRoutingModule} from "@views/pages/pages-routing.module";
 
@@ -7,10 +7,11 @@ import {PagesRoutingModule} from "@views/pages/pages-routing.module";
   declarations: [
     HomeComponent
   ],
-  imports: [
-    CommonModule,
-    PagesRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        PagesRoutingModule,
+        NgOptimizedImage
+    ],
   exports:[
    HomeComponent
   ]
