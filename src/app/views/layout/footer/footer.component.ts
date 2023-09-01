@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import {PhraseOfTheDayService} from "@shared/services/phrase-of-the-day.service";
-import {PhraseOfTheDay} from "@core/models/phrase-of-the-day";
+import {Component, OnInit} from '@angular/core';
+import {PhraseService} from "@shared/services/phrase.service";
+import {Observable} from "rxjs";
+import {Phrase} from "@core/models/phrase";
 
 @Component({
   selector: 'app-footer',
@@ -8,10 +9,19 @@ import {PhraseOfTheDay} from "@core/models/phrase-of-the-day";
   styles: [
   ]
 })
-export class FooterComponent {
-  phrase: PhraseOfTheDay;
+export class FooterComponent implements OnInit{
+  phrase:Array<any> = [];
+  phrase$:Observable<Phrase> = this.phraseService.getPhrase();
+  constructor(private phraseService:PhraseService) {
 
-  constructor(phraseOfTheDay:PhraseOfTheDayService) {
-    this.phrase = phraseOfTheDay.phraseOfTheDay;
   }
+
+  ngOnInit(): void {
+    this.phraseService.getPhrase().subscribe(
+      (response) => {
+      this.phrase = response;
+    })
+  }
+
+  protected readonly JSON = JSON;
 }
