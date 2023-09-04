@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PhraseService} from "@shared/services/phrase.service";
 import {Observable} from "rxjs";
-import {Phrase} from "@core/models/phrase";
+import {Phrase} from "@core/interfaces/phrase.interface";
 
 @Component({
   selector: 'app-footer',
@@ -9,19 +9,17 @@ import {Phrase} from "@core/models/phrase";
   styles: [
   ]
 })
-export class FooterComponent implements OnInit{
-  phrase:Array<any> = [];
+export class FooterComponent{
+  phrase!:Phrase;
   phrase$:Observable<Phrase> = this.phraseService.getPhrase();
   constructor(private phraseService:PhraseService) {
-
+    this.getPhrase();
   }
-
-  ngOnInit(): void {
+  getPhrase(){
     this.phraseService.getPhrase().subscribe(
       (response) => {
-      this.phrase = response;
-    })
+        this.phrase = response;
+      });
   }
 
-  protected readonly JSON = JSON;
 }

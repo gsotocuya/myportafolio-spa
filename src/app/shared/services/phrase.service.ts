@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {Phrase} from "@core/models/phrase";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {catchError, Observable, of} from "rxjs";
+import {Phrase} from "@core/interfaces/phrase.interface";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -12,17 +12,10 @@ export class PhraseService {
 
   constructor(private httpClient: HttpClient) {
   }
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
-
-  getPhrase(): Observable<any> {
+  getPhrase(): Observable<Phrase> {
     return this.httpClient.get<Phrase>(
       `${this.URL}/phrase`
     )
   }
-
 
 }
