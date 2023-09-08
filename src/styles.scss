@@ -287,10 +287,15 @@ button {
   &__title {
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-5);
+    text-align: center;
+
 
     &-color {
       color: var(--first-color);
     }
+  }
+  &__content{
+    text-align: center;
   }
   &__social {
     display: flex;
