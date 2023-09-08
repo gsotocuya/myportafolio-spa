@@ -297,6 +297,12 @@ button {
   &__content{
     text-align: center;
   }
+  &__container{
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+  }
   &__social {
     display: flex;
     flex-direction: column;
@@ -312,7 +318,7 @@ button {
     }
   }
   &__img {
-    position: absolute;
+ //   position: absolute;
     right: 0;
     bottom: 0;
     width: 260px;
