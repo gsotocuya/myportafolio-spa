@@ -1,5 +1,5 @@
-/*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
+/*===== MENU SHOW =====*/
+/*const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
 
@@ -9,27 +9,27 @@ const showMenu = (toggleId, navId) =>{
         })
     }
 }
-showMenu('nav-toggle','nav-menu')
+showMenu('nav-toggle','nav-menu')*/
 //Scroll up
-function scrollUp() {
+/*function scrollUp() {
     const scrollup = document.getElementById("scroll-up");
     if (this.scrollY >= 60) scrollup.classList.add("show-scroll");
     else scrollup.classList.remove("show-scroll");
   }
-  window.addEventListener("scroll", scrollUp);
+  window.addEventListener("scroll", scrollUp);*/
 
 /*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+/*const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show')
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach(n => n.addEventListener('click', linkAction))*/
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+/*const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
     const scrollY = window.pageYOffset
@@ -47,9 +47,9 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
-
+*/
 /*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
+/*const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
     duration: 2000,
@@ -57,7 +57,8 @@ const sr = ScrollReveal({
     // reset: true
 });
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img,.container,.card__article',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img,.container,.card__article',{delay: 400});
+sr.reveal('.home__social-icon',{ interval: 200});
+sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
+*/
