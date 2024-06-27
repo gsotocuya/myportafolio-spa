@@ -10,7 +10,7 @@ import {Phrase} from "@core/interfaces/phrase.interface";
   ]
 })
 export class FooterComponent{
-  phrase!:Phrase;
+  /*phrase!:Phrase;
   phrase$:Observable<Phrase> = this.phraseService.getPhrase();
   constructor(private phraseService:PhraseService) {
     this.getPhrase();
@@ -20,6 +20,6 @@ export class FooterComponent{
       (response) => {
         this.phrase = response;
       });
-  }
+  }*/
 
 }
